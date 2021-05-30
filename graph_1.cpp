@@ -39,5 +39,14 @@ int main()
         v[n1].push_back(n2);
         v[n2].push_back(n1);
     }
+    for(int j=0;j<n+1;j++)
+    {
+        cout<<j<<"\t";
+        for(int it : v[j])
+        {
+            cout<<it<<" ";
+        }
+        cout<<"\n";
+    }
     return 0;
 }

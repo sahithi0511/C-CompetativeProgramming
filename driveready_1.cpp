@@ -1,5 +1,5 @@
-/*#include<iostream>
-using namespace std;*/
+#include<bits/stdc++.h>
+using namespace std;
 /*int main()
 {
     int temp;
@@ -44,3 +44,68 @@ using namespace std;*/
        cout<<"\n";
     }
 }*/
+/*int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int t,n;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        cin>>n;
+        for(int j=n-1;j>=0;j--)
+        {
+            if((n&j)==0)
+            {
+                cout<<j;
+                cout<<"\n";
+                break;
+            }
+            else
+            {
+                n=n&j;
+            }
+            
+        }
+    }
+    return 0;
+}
+*/
+int main()
+{
+    int N,sum_mot,sum_pat,tot;
+    cin>>N;
+    tot=N;
+    
+    for(int i=1;i<N;i++)
+    {
+        sum_mot=0;
+        sum_pat=0;
+        if (tot>0)
+        {
+        cout<<tot<<"\n";
+        sum_pat=i;
+        tot-=sum_pat;
+        }
+        else if (tot==0)
+        {
+            cout<<tot<<"\n";
+            cout<<"Patlu";
+            break;
+        }
+        else if(i*2>=tot)
+            {
+                cout<<tot<<"\n";
+                cout<<"Motu";
+                break;
+            }
+        else
+        {
+            sum_mot=i*2;
+            tot-=sum_mot;
+          //  cout<<sum_pat<<"   "<<sum_mot<<"\n";
+
+        }
+
+    }
+}
