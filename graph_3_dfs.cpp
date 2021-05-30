@@ -25,4 +25,22 @@ class Solution
 	    return ans;
 	}
 };
-
+int main()
+{
+    int V,E;
+    cin>>V>>E;
+    vector<int>adj[V+1];
+    for(int i=0;i<E;i++)
+    {
+        int n1,n2;
+        cin>>n1>>n2;
+        adj[n1].push_back(n2);
+        adj[n2].push_back(n1);
+    }
+    Solution s;
+    vector<int>res=s.dfsOfGraph(V,adj);
+    for(auto it:res)
+    {
+        cout<<it<<" ";
+    }
+}
