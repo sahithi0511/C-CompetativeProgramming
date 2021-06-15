@@ -6,8 +6,6 @@ public:
     bool checkForCycle(int s, int V, vector<int> adj[], vector<int>& visited)
     {
         vector<int> parent(V, -1);
-     
-        // Create a queue for BFS
         queue<pair<int,int>> q;
      
         visited[s] = true;
@@ -61,9 +59,8 @@ int main()
         Solution ob;
         bool res=ob.isCycle(V,adj);
         if (res)
-            cout<<"1"<<"\n";
-        else
-            cout<<"0"<<"\n";
+        cout<<"1"<<"\n";
+         else cout<<"0"<<"\n";
     }
     return 0;
 }
