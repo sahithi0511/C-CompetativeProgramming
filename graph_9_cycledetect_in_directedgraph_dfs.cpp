@@ -47,8 +47,8 @@ int main()
     while(t--)
     {
     int V,E;
-    vector<int>adj[V];
     cin>>V>>E;
+    vector<int>adj[V];
     for(int i=0;i<E;i++)
     {
         int n1,n2;
