@@ -42,6 +42,10 @@ class Solution
 };
 int main()
 {
+    int t;
+    cin>>t;
+    while(t--)
+    {
     int V,E;
     vector<int>adj[V];
     cin>>V>>E;
@@ -54,6 +58,6 @@ int main()
     }
     Solution ob;
    cout<<ob.isCyclic(V,adj)<<"\n";
-
+    }
     return 0;
 }
